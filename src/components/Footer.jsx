@@ -69,7 +69,7 @@ const Footer = () => {
 
           <div className="grid grid-cols-2 gap-4 lg:pl-20 ">
             <div className=""> 
-              <p className="mb-2">
+              <div className="mb-2">
                 Sitemap
                 <ul>
                   {sitemap.map(({label,href}, key) => (
@@ -80,7 +80,7 @@ const Footer = () => {
                     </li>
                   ))}
                 </ul>
-              </p>
+              </div>
             </div>
 
                 <div className=""> 
