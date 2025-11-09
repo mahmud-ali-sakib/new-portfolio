@@ -50,6 +50,10 @@ const skillItem = [
     label: 'Next Js',
   },
   {
+    imgSrc: '/images/nestjs.svg',
+    label: 'Nest Js',
+  },
+  {
     imgSrc: '/images/figma.svg',
     label: 'Figma',
     

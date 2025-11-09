@@ -1,80 +1,84 @@
 import { ButtonPrimary } from "./Button";
 
-
-
 const sitemap = [
   {
-    label: 'Home',
-    href: '#home'
+    label: "Home",
+    href: "#home",
   },
   {
-    label: 'About',
-    href: '#about'
+    label: "About",
+    href: "#about",
   },
   {
-    label: 'Work',
-    href: '#work'
+    label: "Work",
+    href: "#work",
   },
   {
-    label: 'Reviews',
-    href: '#reviews'
+    label: "Reviews",
+    href: "#reviews",
   },
   {
-    label: 'Contact me',
-    href: '#contact'
-  }
+    label: "Contact me",
+    href: "#contact",
+  },
 ];
 
 const socials = [
   {
-    label: 'GitHub',
-    href: ''
+    label: "GitHub",
+    href: "",
   },
   {
-    label: 'LinkedIn',
-    href: ''
+    label: "LinkedIn",
+    href: "",
   },
   {
-    label: 'Twitter X',
-    href: ''
+    label: "Twitter X",
+    href: "",
   },
   {
-    label: 'Instagram',
-    href: ''
+    label: "Instagram",
+    href: "",
   },
   {
-    label: 'CodePen',
-    href: ''
-  }
+    label: "CodePen",
+    href: "",
+  },
 ];
 
 const Footer = () => {
+  const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+  const emailLink = isMobile
+    ? "mailto:mahmudalisakib@gmail.com"
+    : "https://mail.google.com/mail/?view=cm&fs=1&to=mahmudalisakib@gmail.com";
   return (
     <footer className="section">
       <div className="container">
-
         <div className="lg:grid lg:grid-cols-2 ">
-
           <div className="mb-10">
-            <h2 className="headline-1 mb-8 lg:max-w-[12ch] "> 
+            <h2 className="headline-1 mb-8 lg:max-w-[12ch] ">
               Let&apos;s work together today!
             </h2>
-
             <ButtonPrimary
-            href="mailto:mahmudalisakib@gmail.com"
-            label="Start Project"
-            icon="chevron_right"
+              href={emailLink}
+              label="Start Project"
+              icon="chevron_right"
+              target="_blank"
+              rel="noopener noreferrer"
             />
           </div>
 
           <div className="grid grid-cols-2 gap-4 lg:pl-20 ">
-            <div className=""> 
+            <div className="">
               <div className="mb-2">
                 Sitemap
                 <ul>
-                  {sitemap.map(({label,href}, key) => (
+                  {sitemap.map(({ label, href }, key) => (
                     <li key={key}>
-                      <a href={href} className="block text-sm text-zinc-400 py-1 transition-colors hover:text-zinc-200">
+                      <a
+                        href={href}
+                        className="block text-sm text-zinc-400 py-1 transition-colors hover:text-zinc-200"
+                      >
                         {label}
                       </a>
                     </li>
@@ -83,13 +87,17 @@ const Footer = () => {
               </div>
             </div>
 
-                <div className=""> 
+            <div className="">
               <p className="mb-2">
                 Socials
                 <ul>
-                  {socials.map(({label,href}, key) => (
+                  {socials.map(({ label, href }, key) => (
                     <li key={key}>
-                      <a href={href} className="block text-sm text-zinc-400 py-1 transition-colors hover:text-zinc-200" target="_blank">
+                      <a
+                        href={href}
+                        className="block text-sm text-zinc-400 py-1 transition-colors hover:text-zinc-200"
+                        target="_blank"
+                      >
                         {label}
                       </a>
                     </li>
@@ -97,7 +105,6 @@ const Footer = () => {
                 </ul>
               </p>
             </div>
-
           </div>
         </div>
 
