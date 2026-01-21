@@ -18,7 +18,7 @@ const socialLinks = [
     alt: "GitHub",
   },
   {
-    href: "",
+    href: "https://www.linkedin.com/in/mahmud-ali-sakib/",
     icon: (
       <svg
         width="24"
